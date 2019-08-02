@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import { relative } from 'path';
-import { inherits } from 'util';
-import { file } from '@babel/types';
 
 export default class FigureOne extends Component {
 
@@ -20,7 +17,7 @@ export default class FigureOne extends Component {
                         fill: true,
                         borderWidth: 1.3,
                         borderColor: "rgba(255, 110, 134, 0.8)",
-                        pointBackgroundColor: "rgba(255, 110, 134, 0.8)"
+                        pointBackgroundColor: "rgba(255, 110, 134, 1.0)"
                     },
                     {
                         label: "Second SQL Sample",
@@ -28,7 +25,8 @@ export default class FigureOne extends Component {
                         data: [39, 52, 77, 58, 25, 66, 33, 39, 52, 77, 58, 25, 66, 33],
                         fill: true,
                         borderWidth: 1.3,
-                        borderColor: "rgba(21, 195, 0, 0.8)"
+                        borderColor: "rgba(21, 195, 0, 1.0)",
+                        pointBackgroundColor: "rgba(21, 195, 0, 1.0)"
                     }
                 ]
             }
@@ -80,22 +78,26 @@ export default class FigureOne extends Component {
                         responsive: true,
                         layout: {
                             padding: {
-                                top: 40,
-                                left: 20,
+                                top: 50,
+                                left: -5,
                                 right: 40,
                                 bottom: 35
                             }
                         },
                         legend: {
-                            display: false
+                            display: false,
+                            labels: {
+                                defaultFontSize: 10
+                            }
                         },
                         scales: {
                             yAxes: [
                                 {
-                                    barPercentage: 2,
+                                    barPercentage: 0.5,
                                     ticks: {
                                         suggestedMin: 20,
-                                        suggestedMax: 100
+                                        suggestedMax: 100,
+                                        padding: 15
                                     },
                                     gridLines: {
                                         drawBorder: false,
@@ -110,7 +112,7 @@ export default class FigureOne extends Component {
                                     gridLines: {
                                         drawBorder: false,
                                         zeroLineColor: 'transparent',
-                                        color: "rgba(255, 255, 255, 1)"
+                                        color: "rgba(255, 255, 255, 0.05)"
                                     },
                                     ticks: {
                                         padding: 5

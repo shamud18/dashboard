@@ -23,7 +23,10 @@ let DashBoard = ({ graphs }) => {
                     <Col>
                         <Row>
                             <Col className="col-content">
-                                Row 1
+                                <Row>
+                                    Test
+                                </Row>
+                                <FigureOne />
                             </Col>
                         </Row>
 
@@ -33,7 +36,6 @@ let DashBoard = ({ graphs }) => {
                             </Col>
 
                             <Col className="col-content">
-                                <FigureOne />
                             </Col>
                         </Row>
 

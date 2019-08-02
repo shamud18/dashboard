@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import Sidebar from '../displays/sidebar';
 import DashBoard from '../displays/dashboard';
-import { withStyles, createMuiTheme } from '@material-ui/core/styles';
 
 
 //import '../styling/layout.css'; 
